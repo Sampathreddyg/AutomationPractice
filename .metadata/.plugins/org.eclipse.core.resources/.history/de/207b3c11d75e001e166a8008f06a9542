@@ -1,0 +1,22 @@
+package utility;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+public class AmazonDemo {
+
+	public static void main(String[] args) throws IOException {
+
+		String dir = System.getProperty("user.dir");
+		File fi = new File(dir+"\\config.properties");
+		BufferedReader br = new BufferedReader(new FileReader(fi));
+		Properties pr = new Properties();
+		pr.load(br);
+		
+	}
+
+}

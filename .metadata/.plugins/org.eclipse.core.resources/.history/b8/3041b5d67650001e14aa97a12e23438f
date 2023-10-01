@@ -1,0 +1,29 @@
+package utility;
+
+public class Demo {
+
+	public String test(String a) {
+		a="xyz";
+		String b = a.concat("anc");
+		return b;
+	}
+	
+	public String test1(String a) {
+//		a="system";
+		StringBuilder sb = new StringBuilder();
+		String b = "print";
+		StringBuilder c = sb.append(b).append(a);
+		
+		return c;
+	}
+	
+	public static void main(String[] args) {
+		
+		Demo d = new Demo();
+		String c = d.test("Sampath");
+		System.out.println(c);
+		
+		System.out.println(d.test1("Sampath"));
+	}
+
+}

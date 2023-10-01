@@ -1,0 +1,31 @@
+package utility;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class CssSelectorDemo {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("start-maximized");
+		WebDriver driver = new ChromeDriver(options);
+		driver.get("https://www.browserstack.com/guide/css-selectors-in-selenium");
+		WebElement search = driver.findElement(By.xpath("//div/span[@role='button']"));
+//		search.sendKeys("CSS Selector");
+//		search.submit();
+		search.click();
+		
+		Thread.sleep(3000);
+		
+		driver.close();
+	}
+
+}

@@ -1,0 +1,12 @@
+package utility;
+
+public class AmazonDemo {
+
+	public static void main(String[] args) {
+
+		String dir = System.getProperty("user.dir");
+		
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package utility;
+
+public class Demo {
+
+	public String test(String a) {
+		a="xyz";
+		String b = a.concat("anc");
+		return b;
+	}
+	
+	public static void main(String[] args) {
+		
+		Demo d = new Demo();
+		d.test("Sampath");
+	}
+
+}

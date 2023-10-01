@@ -1,0 +1,52 @@
+package utility;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class FlipkartDemo {
+
+	
+	public static void main(String[] args) throws Exception {
+		
+		String phoneModel = "iphone 14";
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.flipkart.com/");
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		Thread.sleep(3000);
+		driver.manage().window().maximize();
+		WebElement search = driver.findElement(By.name("q"));////input[@name='q']
+		search.sendKeys("Iphone 14");
+		search.submit();
+		WebElement phone = driver.findElement(By.xpath("//div[contains(text(),'APPLE iPhone 14 (Midnight, 128 GB)')]/parent::div/parent::div/child::div[2]//div[@class='_30jeq3 _1_WHN1']"));
+		String phoneP = phone.getText();
+		System.out.println("Iphone 14 Price : "+phoneP+"/-");
+		String cost = phoneP.replaceAll("[^0-9]", "");
+		int PhonePrice;
+		try {
+			PhonePrice = Integer.parseInt(cost);
+//		   System.out.println(PhonePrice);
+		}
+		catch (NumberFormatException e) {
+			PhonePrice = 0;
+		}
+		
+		if(PhonePrice<49999) {
+			System.out.println("Price worth");
+		}else {
+			System.out.println("Over Priced");
+		}
+		
+		driver.close();
+		
+	}
+
+}

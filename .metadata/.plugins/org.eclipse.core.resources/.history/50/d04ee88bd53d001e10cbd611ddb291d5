@@ -1,0 +1,20 @@
+package utility;
+
+public class strings {
+
+	public static void main(String[] args) {
+
+		String name1 = "Kadapa";
+		
+		String name2 = "Proddatur";
+		
+		String name3 = "KADAPA";
+		
+		System.out.println(name1.equals(name3));
+		System.out.println(name1.equalsIgnoreCase(name3));
+		System.out.println(name2.charAt(3));
+		System.out.println(name1.concat(name2));
+		
+	}
+
+}

@@ -1,0 +1,24 @@
+package utility;
+
+import java.util.Scanner;
+
+public class Vowel_consonant {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("\nEnter text : ");
+		String st = sc.nextLine();
+		st = st.replace(" ", "").toLowerCase();
+		System.out.print(st + " " + st.length());
+		char[] ch = st.toCharArray();
+		char[] ch = st.toLowerCase().toCharArray();
+		int temp = 0;
+		for (int i = 0; i < ch.length; i++) {
+			if (ch[i] == 'a' || ch[i] == 'e' || ch[i] == 'i' || ch[i] == 'o' || ch[i] == 'u')
+				temp++;
+		}
+		System.out.println("\nNo of vowel in sentence : " + temp);
+		sc.close();
+	}
+}

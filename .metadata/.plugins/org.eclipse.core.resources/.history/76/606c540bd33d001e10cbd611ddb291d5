@@ -1,0 +1,15 @@
+package utility;
+
+public class strings {
+
+	public static void main(String[] args) {
+
+		String name1 = "Kadapa";
+		
+		String name2 = "Proddatur";
+		
+		System.out.println(name1.length());
+		
+	}
+
+}

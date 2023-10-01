@@ -1,0 +1,26 @@
+package tests;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class authenticationPopup {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		
+		driver.get("https://the-internet.herokuapp.com/basic_auth"); // without authentication
+		
+		Thread.sleep(3000);
+		
+		driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth"); //valid authentication
+		
+		
+	}
+
+}
