@@ -21,8 +21,8 @@ public class WebtableDemo1 {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(12));
 		driver.get("http://letcode.in/table");
-//		WebElement table =driver.findElement(By.id("shopping"));
-		WebElement table = driver.findElement(By.id("simpletable"));
+		WebElement table =driver.findElement(By.id("shopping"));
+//		WebElement table = driver.findElement(By.id("simpletable"));
 		WebElement text = driver.findElement(By.xpath("//p[contains(text(),'Check if the sorting')]"));
 
 		Actions action = new Actions(driver);
