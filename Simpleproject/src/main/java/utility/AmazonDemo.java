@@ -30,7 +30,8 @@ public class AmazonDemo {
 		opt.setBrowserVersion("113");
 		WebDriver driver = new ChromeDriver(opt);
 		driver.get(pr.getProperty("url"));
-
+		System.out.println("Page Title : "+driver.getTitle());
+		driver.quit();
 		
 	}
 
