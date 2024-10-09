@@ -1,0 +1,12 @@
+tests\waitsdemo.class
+tests\radiobuttonsdemo.class
+webTables\WebtableDemo1.class
+tests\ButtonsDemo.class
+tests\selectClassdemo.class
+tests\actionsDemo.class
+tests\actionsdemo2.class
+tests\authenticationPopup.class
+tests\dropdowntest1.class
+com\basepack\Basepage.class
+tests\alertsdemo.class
+tests\dropdownstest.class
