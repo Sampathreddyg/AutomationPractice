@@ -25,7 +25,7 @@ public class actionsDemo {
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions option = new ChromeOptions();
 		option.addArguments("start-maximized");
-		option.setBrowserVersion("115");
+//		option.setBrowserVersion("115");
 		WebDriver driver = new ChromeDriver(option);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -37,7 +37,7 @@ public class actionsDemo {
 		driver.switchTo().frame("callout");
 		driver.findElement(By.xpath("//button[@aria-label='Stay signed out']")).click();
 		driver.switchTo().defaultContent();
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
 		Actions action = new Actions(driver);
 		WebElement gmail_link = driver.findElement(By.linkText("Gmail"));
 		action.moveToElement(gmail_link);
