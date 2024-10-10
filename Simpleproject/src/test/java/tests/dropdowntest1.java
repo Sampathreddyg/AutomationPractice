@@ -34,7 +34,7 @@ public class dropdowntest1 {
 		for(WebElement m:Month_Names) {
 			System.out.println(m.getText());
 		}
-			
+			System.out.println("Months count : "+Month_Names.size());
 		driver.close();
 		
 	}
