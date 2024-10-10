@@ -29,7 +29,7 @@ public class actionsDemo {
 		WebDriver driver = new ChromeDriver(option);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-		System.out.println("Browser version "+option.getBrowserVersion());
+		System.out.println("Browser version " + option.getBrowserVersion());
 		DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy h-m-s");
 		Date date = new Date();
 		driver.get("https://www.google.com/");
@@ -37,18 +37,16 @@ public class actionsDemo {
 		driver.switchTo().frame("callout");
 		driver.findElement(By.xpath("//button[@aria-label='Stay signed out']")).click();
 		driver.switchTo().defaultContent();
-//		Thread.sleep(3000);
 		Actions action = new Actions(driver);
 		WebElement gmail_link = driver.findElement(By.linkText("Gmail"));
 		action.moveToElement(gmail_link);
 //		action.click(gmail_link).perform();
 //		driver.wait();
 		action.contextClick(gmail_link).perform();
-		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src, new File(".\\Screenshots\\"+title+"_"+dateFormat.format(date)+ ".png"));
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File(".\\Screenshots\\" + title + "_" + dateFormat.format(date) + ".png"));
 		WebElement search = driver.findElement(By.xpath("//img[@alt='Google']"));
 		action.contextClick(search).perform();
-		Thread.sleep(5000);
 		driver.close();
 	}
 
