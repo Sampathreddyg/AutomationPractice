@@ -1,6 +1,5 @@
 package utility.javaPrograms.strings;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class VowelAndConsonantCheck {
