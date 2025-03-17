@@ -1,16 +1,16 @@
-package utility;
+package utility.javaPrograms.strings;
 
 public class strings {
 
 	public static void main(String[] args) {
 
-		String name1 = "chennur";
+		String name1 = "java";
 		
-		String name2 = "Proddatur town";
+		String name2 = "Automation";
 		
-		String name3 = "KADAPA";
+		String name3 = "TESTING";
 		
-		String name4 = "   chidvi reddy    ";
+		String name4 = "   Page Object Model    ";
 		
 		System.out.println(name1.equals(name3));
 		
@@ -20,9 +20,9 @@ public class strings {
 		
 		System.out.println(name1.concat(name2));
 		
-		System.out.println(name2.contains("tur"));
+		System.out.println(name2.contains("tion"));
 		
-		System.out.println(name2.endsWith("Tur"));
+		System.out.println(name2.endsWith("Tion"));
 		
 		System.out.println(name2.indexOf("u"));
 		
