@@ -19,6 +19,7 @@ public class CommonElementsInArray {
 		Set<Integer> commonSet = new HashSet<>();
 		
 		
+		
 		for(int num : array1) {
 			set1.add(num);
 		}
